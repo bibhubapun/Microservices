@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.stackroute</groupId>
-	<artifactId>MovieAppTest</artifactId>
+	<artifactId>MovieAppTest1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MovieAppTest</name>
 	<description>Demo project for Spring Boot</description>
