@@ -74,5 +74,15 @@ services:
    container_name: eureka1
    ports:
        -8761:8761
+
+ spring-config-server:
+   image: config-docker
+   build: spring-config-server/
+   restart: always
+   network_mode: host
+   container_name: config-serve
+   ports:
+      - 8888:8888
+   
    
    
