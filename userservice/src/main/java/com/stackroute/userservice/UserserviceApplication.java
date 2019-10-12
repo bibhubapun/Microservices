@@ -12,19 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaClient
 public class UserserviceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UserserviceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UserserviceApplication.class, args);
+    }
 
 }
 
 @RefreshScope
 @RestController
 class MessageRestController {
-	@Value("${msg:Hello world - Config Server is not working..pelase check}")
-	private String msg;
-	@RequestMapping("/msg")
-	String getMsg() {
-		return this.msg;
-	}
+    @Value("${msg:Hello world - Config Server is not working..pelase check}")
+    private String msg;
+
+    @RequestMapping("/msg")
+    String getMsg() {
+        return this.msg;
+    }
 }

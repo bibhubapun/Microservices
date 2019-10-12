@@ -8,7 +8,7 @@ services:
     network_mode: host
     hostname: localhost
     environment:
-      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: newDB
       MYSQL_USER: app_root
       MYSQL_PASSWORD: Root@123
@@ -33,6 +33,7 @@ services:
     depends_on:
       - mongo
       - spring-eureka
+      - spring-config-server
     ports:
       - "8090:8090"
 
@@ -45,6 +46,7 @@ services:
     depends_on:
       - mysql
       - spring-eureka
+      - spring-config-server
     ports:
       - "8082:8082"
 

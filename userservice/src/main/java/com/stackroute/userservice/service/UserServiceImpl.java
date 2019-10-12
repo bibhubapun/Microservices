@@ -20,11 +20,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) throws UserAlreadyExistsException {
-        if(userRepository.existsById(user.getId())){
+        if (userRepository.existsById(user.getId())) {
             throw new UserAlreadyExistsException("User Already Exists");
         }
         User savedUser = userRepository.save(user);
-        if(savedUser ==null){
+        if (savedUser == null) {
             throw new UserAlreadyExistsException("User Already Exists");
         }
         return savedUser;
